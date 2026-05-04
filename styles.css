@@ -1,0 +1,45 @@
+
+
+
+* {/*Globals*/
+  /* test border to track boxes*/
+  outline: 1px solid rgba(0,0,0,0.0);
+  font-family: sans-serif;
+}
+
+/* 
+body{
+  min-width: 1000px;
+} */
+
+p:not([class]){
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+#topImage{
+  height: 50%;
+  width: 100%;
+  object-fit: fill;
+  margin-bottom: 0px;
+  display: block;
+}
+
+.horizontalBox{
+  display: flex;
+  gap: 10px;
+
+}
+
+.imgContainr{
+  flex: 1;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.galleryItem{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  object-position: center;
+}
