@@ -2,41 +2,48 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles.css">
-    <title>Page Title</title>
+    <title>Pannkaksrecept</title>
 </head>
-<body style="background-color:#dfa7a7">
-    <div id="centerArea" style="padding-left: 20%; padding-right: 20%;">
+
+<body>
+    <header>
         <img id="topImage" src="test.svg">
-        <div style="background-color:white;padding-left: 15%;padding-right: 15%; margin-top: 0px; padding-bottom: 30px;">
-            <!-- text goes here -->
-            <h1 style="font-family: sans-serif; color: #a10000; /*remove leaking margin*/ margin-top: 0;">Enkelt recept på pannkakor</h1>
-            <p style="background-color: #ebebeb">Traditionella pannkakor</p>
-            <h1>Ingredienser</h1>
-            <p>För en portion</p>
+    </header>
+    <main> <!-- tumregel, alltid under body-->
+        <article>
+            <h1>Enkelt recept på pannkakor</h1>
+            <p ID="description">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
+            <h2>Ingredienser</h2>
+            <p>För 4 portioner</p>
             <ul>
-                <li>1 Banan</li>
-                <li>1/2 Banan</li>
+                <li>2 1/2 dl vetemjöl</li>
+                <li>1/2 tsk salt</li>
+                <li>60dl mjölk</li>
+                <li>3 ägg</li>
+                <li>smör (till stekning)</li>
+                <li>sylt</li>
             </ul>
-            <h1>Steg</h1>
+            <h2>Så här gör du</h2>
             <ol>
-                <li>Ät bananen</li>
-                <li>Ät resten</li>
+                <li>Blanda mjöl och salt i en bunke. </li>
+                <li>Vispa i hälften av mjölken och vispa till en slät smet. </li>
+                <li>Vispa i resten av mjölken och äggen. </li>
+                <li>Låt smeten vila ca 10 minuter.</li>
+                <li>Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna.</li>
+                <li>Servera med sylt, bär eller frukt</li>
             </ol>
-            <h1>Serveringsförslag</h1>
-            <div class="horizontalBox">
-                <div class="imgContainer">
-                    <img class="galleryItem" src="resource/bananaConsumptionInstruction_001.JPG">
+            <h2>Serveringsförslag</h2>
+            <div class="gallery">
+                <div class="imgWrapper">
+                    <img class="galleryItem" src="resource/förslag 1.jpg" alt="Serveringsförslag 1: rullar">
+                    <!-- <figcaption>cap1</figcaption> -->
                 </div>
-                <div class="imgContainer">
-                    <img class="galleryItem" src="resource/bananaConsumptionInstruction_002.JPG">
-                </div>
+                <figure class="imgWrapper">
+                    <img class="galleryItem" src="resource/förslag 2.avif"alt="Serveringsförslag 2: staplade">
+                    <!-- <figcaption>cap2</figcaption> -->
+                </figure>
             </div>
-            
-        </div>
-    </div>
-    
-    
+        </article>
+    </main>
 </body>
-<footer>
-</footer>
 </html>
