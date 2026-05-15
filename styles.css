@@ -1,19 +1,66 @@
+/*CSS Reset*/
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit; 
+  vertical-align: baseline; 
+}*/
+
 * {
   outline: 1px solid rgba(0,0,0,0);
   font-family: sans-serif;
 }
 
+body{
+  background-color:#dfa7a7;
+  /* margin-left: 20%;
+  margin-right: 20%; */
+}
+
+#layout{
+  display:grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 2 1fr;
+}
+
+
+header {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+main{
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 99.75rem;
+}
+
 h1{
   font-family: sans-serif;
   color: #a10000;
-  margin-top: 0;   /*remove leaking margin*/
+  /*remove leaking margin*/
+  /* margin-top: 0; */
 }
 
 article {
   background-color:white;
   padding-left: 15%;
   padding-right: 15%; 
-  margin-top: 0px; 
+  padding-top: 1px;
   padding-bottom: 30px;
 }
 #description{
@@ -21,36 +68,27 @@ article {
   padding: 20px;
 }
 
-body{
-  background-color:#dfa7a7;
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-/* p:not([class]){
-  margin-bottom: 10px;
-  padding: 10px;
-} */
-
 #topImage{
-  height: 50%;
   width: 100%;
   object-fit: fill;
   margin-bottom: 0px;
   display: block;
 }
 
+
 .gallery{
   display: flex;
+  flex-direction: horizontal;
   justify-content: center;
+  flex-flow: row nowrap;
   gap: 10px;
-
 }
 
 .imgWrapper{
   flex: 1;
   aspect-ratio: 1/1;
   overflow: hidden;
+  margin: 0; /*override default figure style*/
 }
 
 .imgWrapper img{
@@ -58,4 +96,15 @@ body{
   height: 100%;
   object-fit:cover;
   object-position: center;
+}
+
+
+@media (max-width: 1200px) {
+  #layout{
+    grid-template-columns: 0 1fr 0;
+  }
+  .gallery{
+    flex-direction: vertical;
+    flex-flow: column nowrap;
+  }
 }
