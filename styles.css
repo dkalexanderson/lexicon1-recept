@@ -1,46 +1,50 @@
-/*CSS Reset*/
-/*html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit; 
-  vertical-align: baseline; 
-}*/
+/*variables go here*/
+:root {
+  /*font families*/
+  --ff-main: Raleway, sans-serif;
+  --ff-headings: "Josefin Sans", sans-serif;
+  
+  /*font weight*/
+  --fw-bold: 600;
+  --fw-bolder:900;
+  
+  /*font size*/
+  
+  --fw-small: .825rem;
+  --fs-large: 1.5rem;
+}
 
 * {
   outline: 1px solid rgba(0,0,0,0);
-  font-family: sans-serif;
 }
 
+/* ==== rebuilding css after reset */
+html{
+  color-scheme: light;
+  font-family: "Fraunces", serif;
+}
+ul, ol {
+  margin: 1em;
+  padding-left: 30px;
+}
+h1, h2 {
+  font-size: 1.5em;
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-headings);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* === done rebuilding ua css */
+
+/* === stick everything to a grid */
 body{
   background-color:#dfa7a7;
-  /* margin-left: 20%;
-  margin-right: 20%; */
 }
 
 #layout{
   display:grid;
   grid-template-columns: 300px 1fr 300px;
   grid-template-rows: 2 1fr;
-}
-
-
-header {
-  grid-column: 2;
-  grid-row: 1;
 }
 
 main{
@@ -50,7 +54,6 @@ main{
 }
 
 h1{
-  font-family: sans-serif;
   color: #a10000;
   /*remove leaking margin*/
   /* margin-top: 0; */
@@ -66,6 +69,7 @@ article {
 #description{
   background-color: #ebebeb;
   padding: 20px;
+  font-size: 1.25rem;
 }
 
 #topImage{
@@ -75,29 +79,27 @@ article {
   display: block;
 }
 
-
 .gallery{
   display: flex;
   flex-direction: horizontal;
   justify-content: center;
   flex-flow: row nowrap;
   gap: 10px;
-}
 
-.imgWrapper{
-  flex: 1;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-  margin: 0; /*override default figure style*/
-}
+  .imgWrapper{
+    flex: 1;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    margin: 0;
 
-.imgWrapper img{
-  width: 100%;
-  height: 100%;
-  object-fit:cover;
-  object-position: center;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      object-position: center;
+    }
+  }
 }
-
 
 @media (max-width: 1200px) {
   #layout{
@@ -106,5 +108,17 @@ article {
   .gallery{
     flex-direction: vertical;
     flex-flow: column nowrap;
+  }
+  article{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  main > .imgWrapper{
+    overflow:hidden;
+    img{
+      height: 200%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }

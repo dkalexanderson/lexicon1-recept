@@ -1,0 +1,26 @@
+Specificity format is 1-2-3-4
+1 is inline and has highest priority
+2 is ID
+3 is class
+4 is universal
+
+*{} is the universal selector
+
+p{} is a tag selecctor
+div, .test1, .test2{} you can ofc have several
+#{} is the ID selector
+.{} is the class selector
+.class1 .class2{} targets all class2 under class1
+.class1 > .class2{} only targets class2 as direct child of class1
+.class1 ~ div{} targets all divs that are subsequent siblings of class1
+
+pseudo-classes
+button:hover{} targets the state of the button when you hover over it
+input:focus{} is another one; the focus state is a text field youre currently writing in
+:first-child, last-child{} targets first and last child
+:nth-child(n){} direct absolute index selection
+    note, this accepts integers for absolute target and formulas for sequences, as in 3n+1
+:not(){} blacklist, takes any selector as arg
+:is(div, h1) inherits highest specificity but has same targeting as div, h1
+    note: lets you stack pseudoclasses like :is(h1, h2):pseudo1:pseudo2:
+:has(div) filters target by presence of children

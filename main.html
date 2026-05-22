@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+    <!-- === Tailwind preflight nonsense === -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link rel="stylesheet" href="reset_tailwind.css">  -->
+    
+    <!-- === Plain minimal reset === -->
+    <link rel="stylesheet" href="reset_minimal.css">
+    
+    <!-- === Main style(s) go here === -->
     <link rel="stylesheet" href="styles.css">
+
+    
+    <!-- === Google fonts ("Fraunces") === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+   
+    <!-- Rest of head-stuff -->
     <title>Pannkaksrecept</title>
 </head>
 
 <body>
     <div id="layout">
-        <header>
-            <!-- <img id="topImage" src="test.svg" alt="Illustration av pannkakor"> -->
-        </header>
-        <main> <!-- tumregel, alltid under body-->
-            <img id="topImage" src="test.svg" alt="Illustration av pannkakor">
+        <main> 
+            <div class="imgWrapper">
+                <img id="topImage" src="test.svg" alt="Illustration av pannkakor">
+            </div>
             <article>
                 <h1>Enkelt recept på pannkakor</h1>
                 <p ID="description">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
