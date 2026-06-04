@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <!-- === Tailwind preflight nonsense === -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link rel="stylesheet" href="reset_tailwind.css">  -->
+    
+    <!-- === Plain minimal reset === -->
+    <link rel="stylesheet" href="../Styles/reset_minimal.css">
+    
+    <!-- === Main style(s) go here === -->
+    <link rel="stylesheet" href="../Styles/style_main_v2.css">
+    
+    
+    <!-- === Google fonts ("Fraunces") === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Rest of head-stuff -->
+    <title>Pannkaksrecept</title>
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <nav id="topnav">
+                <a id="logo" href="https://www.google.com/"><img src="../Assets/100pxcake.png" alt="Cake logo"></a>
+                <a href="https://www.google.com/">Hem</a>
+                <a href="catalog.html">Alla artiklar</a>
+                <a href="https://www.google.com/">Something</a>
+                <a href="https://www.google.com/">Butik</a>
+                <a href="https://www.google.com/">Kontakt</a>
+            </nav>
+        </header>
+        <main> 
+            <div class="imgWrapper">
+                <img id="topImage" src="../Assets/test.svg" alt="Illustration av pannkakor">
+            </div>
+            <article>
+                <h1>Enkelt recept på pannkakor</h1>
+                <p ID="description">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
+                <h2>Ingredienser</h2>
+                <p>För 4 portioner</p>
+                <ul>
+                    <li>2 1/2 dl vetemjöl</li>
+                    <li>1/2 tsk salt</li>
+                    <li>60dl mjölk</li>
+                    <li>3 ägg</li>
+                    <li>smör (till stekning)</li>
+                    <li>sylt</li>
+                </ul>
+                <h2>Så här gör du</h2>
+                <ol>
+                    <li>Blanda mjöl och salt i en bunke. </li>
+                    <li>Vispa i hälften av mjölken och vispa till en slät smet. </li>
+                    <li>Vispa i resten av mjölken och äggen. </li>
+                    <li>Låt smeten vila ca 10 minuter.</li>
+                    <li>Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna.</li>
+                    <li>Servera med sylt, bär eller frukt</li>
+                </ol>
+                <h2>Serveringsförslag</h2>
+                <div class="gallery">
+                    <figure class="imgWrapper">
+                        <img class="galleryItem" src="../Files/förslag 1.jpg" alt="Serveringsförslag 1: rullar">
+                        <!-- <figcaption>cap1</figcaption> -->
+                    </figure>
+                    <figure class="imgWrapper">
+                        <img class="galleryItem" src="../Files/förslag 2.avif" alt="Serveringsförslag 2: staplade">
+                        <!-- <figcaption>cap2</figcaption> -->
+                    </figure>
+                </div>
+                <section id="commentSection">
+                    <h2>Recenssioner</h2>
+                    <form action="#" autocomplete="on">
+                        <Label>Namn: 
+                            <input type="text" name="reviewName" id="reviewName" placeholder="Ditt namn" required>
+                        </Label>
+                        <Label>E-post: 
+                            <input type="email" name="reviewAdreess" id="reviewAdress" placeholder="Din adress" required>
+                        </Label>
+                        <fieldset>
+                            <legend>Betyg</legend>
+                            <label><input type="radio" name="rating" value="1"> 1</label>
+                            <label><input type="radio" name="rating" value="2"> 2</label>
+                            <label><input type="radio" name="rating" value="3"> 3</label>
+                            <label><input type="radio" name="rating" value="4"> 4</label>
+                            <label><input type="radio" name="rating" value="5" checked> 5</label>
+                        </fieldset>
+                        <label>
+                            <textarea></textarea>
+                        </label>
+                        <button type="submit">Skicka recenssion</button>
+                    </form>
+                    
+                </section>
+            </article>
+            
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+</html>

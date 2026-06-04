@@ -1,0 +1,17 @@
+*{
+  outline: 1px solid rgba(0,0,0,1);
+}
+
+body{
+    margin: 50px;
+}
+
+.gallery{
+    margin: 5px;
+    background-color: brown;
+}
+
+.object{
+    background-color: aqua;
+    margin: 5px;
+}
